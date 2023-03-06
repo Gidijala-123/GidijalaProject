@@ -1,0 +1,88 @@
+html
+  head
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js")
+    script(type="text/javascript" src="javascripts/angular.min.js")
+    script(type="text/javascript" src="javascripts/angular.js")
+  style.
+      body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:white;
+      }
+     
+      input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      }
+      input[type=submit] {
+      background-color: darkblue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      }
+      input[type=submit]:hover {
+      background-color: red;
+      }
+      .container {
+      max-width:50%;
+      margin-top:20px;
+      margin-bottom:30px;
+      border-radius: 12px;
+      background-color: powderblue;
+      border:2px solid darkblue;
+      padding: 20px;
+      }
+      form{
+      background-color: powderblue;
+      }
+      .a{
+      color:darkblue;
+      }
+      h3{
+      color:darkblue;
+      text-align:center;
+      font-weight:bold;
+      text-shadow:0 0 3px black;
+      border-bottom:2px solid darkblue;
+      margin-top:0px;
+      }
+  body(ng-app="pdfapp")
+    div(ng-controller="pdfcont")
+        .container
+          form.form-group
+            h3 Feedback Form
+            label.a Your Name
+            input#fname(type="text" name="firstname" placeholder="Your name.." ng-model="pdfs.name")
+            label.a Select your rating with your experience.
+            br
+            input(type="radio" value="Bad" name="experience" ng-model="pdfs.experience")
+            label Bad
+            br
+            input(type="radio" value="Average" name="experience" ng-model="pdfs.experience")
+            label Average
+            br
+            input(type="radio" value="Good" name="experience" ng-model="pdfs.experience")
+            label Good
+            br
+            label.a Place
+            select(ng-model="pdfs.place")
+              option Kakinada
+              option Rajahmundry
+              option Vizag
+            label.a Provide your valuable comments
+            textarea#subject(name="subject" placeholder="Write something.." style="height:100px" ng-model="pdfs.cmt")
+            center
+                input(type="submit" value="Post your Feedback" ng-click="pdf(pdfs)") 
+
+

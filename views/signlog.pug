@@ -1,0 +1,166 @@
+html
+  head
+    title Sign-UP for Utility site
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://yui.yahooapis.com/pure/0.5.0/pure-min.css")
+    link(rel="stylesheet" href="stylesheets/signlogstyle.css")
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js")    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(type="text/javascript" src="javascripts/angular.min.js")
+
+
+  body(ng-app="loginapp")
+    .container
+
+      form.signUp(ng-controller="signupController")
+        h1
+          span S
+          span i
+          span g
+          span n
+          |-
+          span U
+          span p
+        .field
+          span.label__icon.fa.fa-envelope
+          input#signupname(type="text" ng-model="reg.mail" placeholder="Enter your name" required="")
+          label(for="signupname") Email ID
+        .field
+          span.label__icon.fa.fa-eye.toggle-password(toggle="#password1")
+          input#password1(type="password" ng-model="reg.pwd" onkeyup='check();' placeholder="Password must be of length 16" required minlength="4" size="16")
+          label(for="password1") Password
+        .field
+          span.label__icon.fa.fa-eye.toggle-password(toggle="#password2")
+          input#password2(type="password" ng-model="reg.cpwd" onkeyup='check();' placeholder="Enter your Password" required="")
+          label#message(for="password2") Confirm password 
+        button.form-btn.sx.log-in
+          span Log In
+        button.form-btn.dx#submit(ng-click="signup(reg)" type="submit" disabled='') Sign Up 
+          span.fa.fa-check &#8195
+
+
+      form.signIn(ng-controller="loginController")
+        h2(style="color:white;margin-top:13px;margin-bottom:20px;") Welcome back..!
+        h1(style="margin-bottom:15px;")
+          span L
+          span o
+          span g
+          span i
+          span(style="font-size: 26px;") n
+        .field
+          span.label__icon.fa.fa-envelope
+          input#loginname(type="text" ng-model="log.mail" placeholder="Enter your name" required="")
+          label(for="loginname") Email ID
+        .field
+          span.label__icon.fa.fa-eye.toggle-password(toggle="#password3")
+          input#password3(type="password" ng-model="log.pwd" placeholder="Password must be of length 16" required minlength="4" size="16")
+          label(for="password3") Password
+        .field  
+          a(href="/forgot") Forgot your password?       
+        button.form-btn.sx.back
+          span.fa.fa-reply &#8195
+          span Back
+        button.form-btn.dx(ng-click="login(log)") Log In
+    
+    script.
+      $(".log-in").click(function(){
+      $(".signIn").addClass("active-dx");
+      $(".signUp").addClass("inactive-sx");
+      $(".signUp").removeClass("active-sx");
+      $(".signIn").removeClass("inactive-dx");
+      });
+      $(".back").click(function(){
+      $(".signUp").addClass("active-sx");
+      $(".signIn").addClass("inactive-dx");
+      $(".signIn").removeClass("active-dx");
+      $(".signUp").removeClass("inactive-sx");
+      });
+
+    script.
+      var app = angular.module('loginapp', []);
+      app.controller('signupController', function($scope,$http){
+
+        $scope.signup = function(reg){
+          $http({
+            method : 'POST',
+            url : '/postsignup',
+            data : $scope.reg
+          }).then( function success(response){
+            alert("Registered Successfully");
+            $scope.reg = {};
+          }, function error(response){
+            alert("Registration Failed, Please try again");
+          });
+        }
+      })
+
+      app.controller('loginController', function($scope,$http,$window){
+
+        $scope.login = function(log){
+          $http({
+            method:'POST',
+            url: '/postlogin',
+            data: $scope.log
+          }).then(function success(response){
+            alert("login successfull");
+            $window.location.href = '/home'
+          }, function error(response){
+            alert("Invalid credentials");
+            $scope.log = {};
+          });
+        }
+
+      });
+
+    script.
+      $(".toggle-password").click(function() {
+      $(this).toggleClass("fa-eye fa-eye-slash");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password") {
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+      });
+  
+    script.
+      var check=function(){
+      if(document.getElementById('password1').value==document.getElementById('password2').value){
+      document.getElementById('message').style.color='#08FB25';
+      document.getElementById('message').style.fontWeight='bold';
+      document.getElementById('message').innerHTML='Passwords matching';
+      document.getElementById('submit').disabled=false;
+      }
+      else{
+      document.getElementById('message').style.color='#FE0303';
+      document.getElementById('message').style.fontWeight='bold';
+      document.getElementById('message').innerHTML='Passwords doesnt match';
+      document.getElementById('submit').disabled=true;
+      }
+      };
+
+    //- script.
+      var password1 = document.getElementById("password1")
+      ,   password2 = document.getElementById("password2");
+      function validatePassword()
+      {
+        if(password1.value == password2.value)
+        {
+          password2.setCustomValidity("Passwords Match");
+          document.getElementById('submit').disabled=false;
+        } 
+        else 
+        {
+          document.getElementById('submit').disabled=true;
+          password2.setCustomValidity('Passwords doesnt Match');
+        }
+      }
+      password1.onchange = validatePassword;
+      password2.onkeyup = validatePassword;
+
+    

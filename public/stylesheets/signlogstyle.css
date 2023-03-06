@@ -1,0 +1,325 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400';
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tw Cen MT';
+    }
+    body {
+    background:#1d1d1d;
+    }
+    .container{
+    position:absolute;
+    width: auto;
+    height:auto;
+    top: calc(50% - 240px);
+    left: calc(50% - 160px);
+    }
+   
+    form {
+    position: absolute;
+    background: #640236;
+    width: 310px;
+    height: 470px;
+    border-radius: 10px;
+    padding: 30px 20px 0 20px;
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 35px 25px rgba(0, 0, 0, 0.086),
+      0 20px 20px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    } 
+    form.signIn{
+        background:#470348;
+    }   
+    
+    button.form-btn {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 0;
+    border: none;
+    outline:none;
+    font-family: 'Dosis';
+    font-size: 24px;
+    text-transform: capitalize;
+    cursor: pointer;
+    }
+    button.form-btn.sx {
+    left: 0;
+    border-radius: 0 10px 0 10px;
+    background-color: #1d1d1d;
+    color: #fff;
+    transition:all 0.3s linear;
+    }
+    button.form-btn.sx:hover {
+    background-color:white;
+    color: black;
+    font-weight: bold;
+    }
+    button.form-btn.sx.back {
+    background-color: #1d1d1d;
+    transition:all 0.3s linear;a
+    }
+    button.form-btn.sx.back:hover {
+    background-color: white;
+    color:black;
+    font-weight: bold;
+    }
+    button.form-btn.dx {
+    right: 0;
+    border-radius: 0 0 10px 0;
+    background-color: #640236;
+    color: #fff;
+    }
+    form.signIn button.form-btn.dx{
+        background-color: #470348;
+    }
+    
+    .signIn input,
+    .signUp .w100 {
+    width: 90%;
+    
+    }
+    .signIn{
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+    }
+    .signUp {
+    z-index: 2;
+    }
+    .active-dx{
+    animation-name: foregrounding-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    }
+    .active-sx{
+    animation-name: foregrounding-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    }
+    .inactive-dx{
+    animation-name: overshadowing-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    }
+    .inactive-sx{
+    animation-name: overshadowing-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    }
+    @keyframes overshadowing-dx {
+    0%{
+    z-index:2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+    }
+    @keyframes overshadowing-sx {
+    0%{
+    z-index:2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+    }
+    @keyframes foregrounding-dx {
+    0%{
+    z-index:1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+    }
+    50%{
+    z-index:2;
+    transform: perspective(100px) translate3d(400px, 0px, -30px);
+    }
+    100%{
+    z-index:2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    }
+    }
+    @keyframes foregrounding-sx {
+    0%{
+    z-index:1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0.5;
+    }
+    50%{
+    z-index:2;
+    transform: perspective(100px) translate3d(-400px, 0px, -30px);
+    }
+    100%{
+    z-index:2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    }
+    }
+
+    .label__icon {
+    color:white;
+    position:fixed;
+    margin:0px 0px 0px -7px;
+    font-size:23px;
+    }
+    a{
+        color:white;
+        text-decoration: none;
+        margin-top: 40px;
+    }
+    a:hover{
+        color:aqua;
+    }
+    
+
+    h1,h2{
+    text-align: center;
+    margin-bottom: 50px;
+    }
+    h1 span{
+    display: inline-block;
+    font-weight: bold;
+    font-family: Tw Cen MT;
+    animation: animate 1s linear forwards;
+    text-shadow: 0 0 6px black;
+    }
+    @keyframes animate{
+    0%{
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px)
+    }
+    100%{
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter:blur(0)
+    }
+    }
+    h1 span:nth-child(1){
+        color:orange; /*font clr for letter S */
+        opacity: 0;
+        animation-delay: 1s;
+    }
+    h1 span:nth-child(2){
+        color:white;/*font clr for letter I */
+        opacity: 0;
+        font-size: 26px;
+        animation-delay: 1.5s;
+    }
+    h1 span:nth-child(3){
+        color:aqua;/*font clr for letter G */
+        opacity: 0;
+        font-size: 26px;
+        animation-delay: 1.75s;
+    }
+    h1 span:nth-child(4){
+        color:red;/*font clr for letter N */
+        opacity: 0;
+        font-size: 26px;
+        animation-delay: 2s;
+    }
+    h1 span:nth-child(5){
+        color:orange;/*font clr for letter U */
+        opacity: 0;
+        animation-delay: 2.5s;
+    }
+    h1 span:nth-child(6){
+        color:white;/*font clr for letter P */
+        opacity: 0;
+        font-size: 26px;
+        animation-delay: 2.75s;
+    }
+    h1 span:nth-child(7){
+        opacity: 0;
+        animation-delay: 3s;
+    }
+    h1 span:nth-child(8){
+        
+        opacity: 0;
+        animation-delay: 3.5s;
+    }
+    h1 span:nth-child(9){
+        color:black;
+        opacity: 0;
+        animation-delay: 3.75s;
+    }
+
+
+    .field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 35px;
+    }
+    label, input {
+    transition: all 0.2s;
+    /*touch-action: manipulation;*/
+    margin-left:25px;
+    background-color: transparent;
+    color: white;
+    }
+    label {
+    /*text-transform: uppercase;*/
+    letter-spacing: 0.05em;
+    color:white;
+    font-size:15px;
+    padding-left: -20px;
+    margin-bottom: -5px;
+    }
+    input {
+    font-size: 15px;
+    border: 0;
+    border-bottom: 3px solid white;
+    font-family: inherit;
+    -webkit-appearance: none;
+    cursor: text;
+    background-color:transparent;
+    }
+    input:focus {
+    outline: 0;
+    color:white;
+    border-bottom: 3px solid white;
+    }
+    input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+    }
+    ::-webkit-input-placeholder {
+    opacity: 0;
+    font-size:10px;
+    color:white;/*placeholder color after focus*/
+    transition: inherit;
+    }
+    input:focus::-webkit-input-placeholder {
+    opacity: 5;
+    }
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+    color:aqua;
+    font-size:15px;
+    }
+
+
+   

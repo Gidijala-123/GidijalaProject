@@ -1,0 +1,1239 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3")
+    title Own Project(Multi utilities)
+    // using online links
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+    link(rel="shortcut icon" type="image/png" href="images/favicon.png")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css") 
+    link(href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="stylesheets/Homestyle.css")
+    link(rel="stylesheet" href="stylesheets/custom.jsquery.min.css")
+    link(href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet")
+    //covid links
+    script(src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+    script(type="text/javascript" src="javascripts/click.js")
+    script(type="text/javascript" src="javascripts/angular.min.js")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js")
+
+  body(ng-app="todoapp")
+    .page-wrapper.default-theme.sidebar-bg.bg1.toggled
+      header
+        .sidebar-item.sidebar-brand
+          a#pin-sidebar.btn(style="margin-left:-20px;padding:5px 8px 5px 8px;border:1.5px solid #FC4159;")
+            span.fa.fa-bars(style="color:white;")
+        ul.menus.cf
+          li
+            a(href="") Menu A
+            ul.submenus
+              li
+                a(href="") Submenu - 1
+              li
+                a(href="") Submenu - 2
+              li
+                a(href="") Submenu - 3
+              li
+                a(href="") Submenu - 4
+          li
+            a(href="") Menu B
+            ul.submenus
+              li
+                a(href="") Submenu - 5
+              li
+                a(href="") Submenu - 6
+              li
+                a(href="") Submenu - 7
+              li
+                a(href="") Submenu - 8
+          li
+            a(href="") Menu C
+            ul.submenus
+              li
+                a(href="") Submenu - 9
+              li
+                a(href="") Submenu - 10
+              li
+                a(href="") Submenu - 11
+              li
+                a(href="") Submenu - 12
+          li
+            a(href="") Menu D
+            ul.submenus
+              li
+                a(href="") Submenu - 13
+              li
+                a(href="") Submenu - 14
+              li
+                a(href="") Submenu - 15
+              li
+                a(href="") Submenu - 16
+        
+      nav#sidebar.sidebar-wrapper
+        .sidebar-content
+          .sidebar-item.sidebar-header.d-flex.flex-nowrap
+            .user-pic
+              img.img-responsive(src="images/gbr.jpg" alt="User picture")
+            .user-info
+              span.user-name
+                strong.xt(style="color:yellow") Bhargava
+                strong.xt(style="color:aqua;font-weight:bold;") Gidijala
+              span.user-role Im A                  
+                div
+                  span
+                    | Designer
+                    br
+                    | YouTuber
+                    br
+                    | Quote creator
+                    br
+                    | Gamer
+              span.user-name
+                normal(style="color:white;") A Project on Utilities
+              
+          // sidebar-search
+          .sidebar-item.sidebar-search
+            div
+              .input-group
+                input.form-control.search-menu(type="text" placeholder="Search...")
+                .input-group-append
+                  span.input-group-text
+                    i.xb.far.fa-file-search(aria-hidden="true")
+          // sidebar-menu
+          .sidebar-item.sidebar-menu
+            ul
+              li.header-menu
+                span(style="display:flex;") Toggle Background..! &#8197
+                  .custom-control.custom-switch
+                    input#toggle-bg.custom-control-input(type="checkbox" checked="" )
+                    label.custom-control-label(for="toggle-bg" style="margin-left:50px;margin-right:0px;")
+              li.sidebar-dropdown
+                a(href="#")
+                  i.xb.far.fa-tachometer-alt-slow
+                  span.menu-text.xt Dashboard
+                  span.badge.badge-pill.badge-warning New
+                .sidebar-submenu
+                  ul
+                    li
+                      a(href="#")
+                        | Dashboard 1
+                        span.badge.badge-pill.badge-success Pro
+                    li
+                      a(href="#") Dashboard 2
+                    li
+                      a(href="#") Dashboard 3
+              li.sidebar-dropdown
+                a(href="#")
+                  i.xb.far.fa-shopping-cart
+                  span.menu-text.xt E-commerce
+                  span.badge.badge-pill.badge-danger 3
+                .sidebar-submenu
+                  ul
+                    li
+                      a(href="/index")
+                        | Go to E-Site ?    
+              li.sidebar-dropdown
+                a(href="#")
+                  i.xb.far.fa-images
+                  span.menu-text.xt Gallery
+                .sidebar-submenu
+                  ul
+                    li
+                      a(data-toggle="tab" href="#tab1")
+                        | My collections
+              li.sidebar-dropdown
+                a(href="#")
+                  i.xb.far.fa-lungs-virus
+                  span.menu-text.xt Covid-19
+                .sidebar-submenu
+                  ul
+                    li
+                      a(data-toggle="tab" href="#tab2") Click for live status    
+              li.sidebar-dropdown
+                a(href="#")
+                  i.xb.far.fa-image
+                  span.menu-text.xt Wallpapers
+                .sidebar-submenu
+                  ul
+                    li(style="margin:5px 0px 5px 13px;")
+                      .row(style="width:200px;height:50px;")
+                        .col-md-6.selected(data-bg="bg1" style="background-size:cover;")
+                        .col-md-6(data-bg="bg2" style="background-size:cover;")
+                      .row(style="width:200px;height:50px;")
+                        .col-md-6(data-bg="bg3" style="background-size:cover;")
+                        .col-md-6(data-bg="bg4" style="background-size:cover;")
+                    
+              li.header-menu
+                span Extra
+              li
+                a(href="#")
+                  i.xb.fa.fa-book
+                  span.menu-text.xt Documentation
+                  span.badge.badge-pill.badge-primary Beta
+              li
+                a(data-toggle="tab" href="#tab3")
+                  i.xb.far.fa-clipboard-list-check
+                  span.menu-text.xt To-do list
+              li
+                a(href="#")
+                  i.xb.far.fa-calendar-day
+                  span.menu-text.xt Calender
+              li
+                a(href="#")
+                  i.xb.fa.fa-book
+                  span.menu-text.xt Examples
+                  span.badge.badge-pill.badge-primary Beta
+              li
+                a(href="#")
+                  i.xb.fa.fa-calendar
+                  span.menu-text.xt Calendar
+              li
+                a(href="#")
+                  i.xb.fa.fa-folder
+                  span.menu-text.xt Examples
+              
+          // sidebar-menu
+        // sidebar-footer
+        .sidebar-footer
+          .dropdown
+            a(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+              i.fa.fa-bell
+              span.badge.badge-pill.badge-warning.notification 3
+            .dropdown-menu.notifications(aria-labelledby="dropdownMenuMessage")
+              .notifications-header
+                i.fa.fa-bell
+                | Notifications
+              .dropdown-divider
+              a.dropdown-item(href="#")
+                .notification-content
+                  .icon
+                    i.fas.fa-check.text-success.border.border-success
+                  .content
+                    .notification-detail
+                      | Lorem ipsum dolor sit amet consectetur adipisicing
+                      | elit. In totam explicabo
+                    .notification-time
+                      | 6 minutes ago
+              a.dropdown-item(href="#")
+                .notification-content
+                  .icon
+                    i.fas.fa-exclamation.text-info.border.border-info
+                  .content
+                    .notification-detail
+                      | Lorem ipsum dolor sit amet consectetur adipisicing
+                      | elit. In totam explicabo
+                    .notification-time
+                      | Today
+              a.dropdown-item(href="#")
+                .notification-content
+                  .icon
+                    i.fas.fa-exclamation-triangle.text-warning.border.border-warning
+                  .content
+                    .notification-detail
+                      | Lorem ipsum dolor sit amet consectetur adipisicing
+                      | elit. In totam explicabo
+                    .notification-time
+                      | Yesterday
+              .dropdown-divider
+              a.dropdown-item.text-center(href="#") View all notifications
+
+          .dropdown
+            a(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+              i.fa.fa-envelope
+              span.badge.badge-pill.badge-success.notification 7
+            .dropdown-menu.messages(aria-labelledby="dropdownMenuMessage")
+              .messages-header
+                i.fa.fa-envelope
+                | Messages
+              .dropdown-divider
+              a.dropdown-item(href="#")
+                .message-content
+                  .pic
+                    img(src="images/gbr.jpg" alt="")
+                  .content
+                    .message-title
+                      strong  Jhon doe
+                    .message-detail
+                      | Lorem ipsum dolor sit amet consectetur adipisicing
+                      | elit. In totam explicabo
+              a.dropdown-item(href="#")
+                .message-content
+                  .pic
+                    img(src="images/user.jpg" alt="")
+                  .content
+                    .message-title
+                      strong  Jhon doe
+                    .message-detail
+                      | Lorem ipsum dolor sit amet consectetur adipisicing
+                      | elit. In totam explicabo
+              a.dropdown-item(href="#")
+                .message-content
+                  .pic
+                    img(src="images/user.jpg" alt="")
+                  .content
+                    .message-title
+                      strong  Jhon doe
+                    .message-detail
+                      | Lorem ipsum dolor sit amet consectetur adipisicing
+                      | elit. In totam explicabo
+              .dropdown-divider
+              a.dropdown-item.text-center(href="#") View all messages
+
+          .dropdown
+            a(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+              i.fa.fa-cog.fa-spin
+              span.badge-sonar
+            .dropdown-menu(aria-labelledby="dropdownMenuMessage")
+              a.dropdown-item(href="/resume") My Resume
+              a.dropdown-item(href="#") Help
+              a.dropdown-item(href="#") Setting
+          div
+            a(href="/logout")
+              i.fa.fa-power-off
+                span.tooltiptext Logout ?
+          
+      // page-content
+      section.wrapper.site-min-height.page-content
+        .row(style="margin-top:10px;")
+          .tab-content(style="width:100%;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:20px;")
+
+            //******dont forget to add data-toggle=tab while calling 'href'
+            #tab1.tab-pane.fade.in
+              #gallery
+                div
+                  img(src="images/v (1).jpg")
+                  a(href="#lightbox-1") Bhargava
+                div
+                  img(src="images/v (2).jpg")
+                  a(href="#lightbox-2") 513
+                div
+                  img(src="images/v (3).jpg")
+                  a(href="#lightbox-3") 514
+                div
+                  img(src="images/v (4).jpg")
+                  a(href="#lightbox-4") 515
+                div
+                  img(src="images/v (5).jpg")
+                  a(href="#lightbox-5") 516
+                div
+                  img(src="images/v (6).jpg")
+                  a(href="#lightbox-6") 517
+                div
+                  img(src="images/v (7).jpg")
+                  a(href="#lightbox-7") 518
+                div
+                  img(src="images/v (8).jpg")
+                  a(href="#lightbox-8") 519
+                div
+                  img(src="images/v (9).jpg")
+                  a(href="#lightbox-9") 520
+                div
+                  img(src="images/v (10).jpg")
+                  a(href="#lightbox-10") 521
+                div
+                  img(src="images/v (11).jpg")
+                  a(href="#lightbox-11") 522
+                div
+                  img(src="images/v (12).jpg")
+                  a(href="#lightbox-12") 523
+                div
+                  img(src="images/v (13).jpg")
+                  a(href="#lightbox-13") 524
+                div
+                  img(src="images/v (14).jpg")
+                  a(href="#lightbox-14") 525
+                div
+                  img(src="images/v (15).jpg")
+                  a(href="#lightbox-15") 526
+                div
+                  img(src="images/b (1).jpg")
+                  a(href="#lightbox-16") 527
+                div
+                  img(src="images/b (2).jpg")
+                  a(href="#lightbox-17") 528
+                div
+                  img(src="images/b (3).jpg")
+                  a(href="#lightbox-18") 529
+                div
+                  img(src="images/b (4).jpg")
+                  a(href="#lightbox-19") 529
+                div
+                  img(src="images/b (5).jpg")
+                  a(href="#lightbox-20") 529
+                div
+                  img(src="images/b (6).jpg")
+                  a(href="#lightbox-21") 529
+                div
+                  img(src="images/b (7).jpg")
+                  a(href="#lightbox-22") 529
+                div
+                  img(src="images/b (8).jpg")
+                  a(href="#lightbox-23") 529
+                div
+                  img(src="images/b (9).jpg")
+                  a(href="#lightbox-24") 529
+                div
+                  img(src="images/b (10).jpg")
+                  a(href="#lightbox-25") 529
+                div
+                  img(src="images/b (11).jpg")
+                  a(href="#lightbox-26") 529
+                div
+                  img(src="images/b (12).jpg")
+                  a(href="#lightbox-27") 529
+                div
+                  img(src="images/b (13).jpg")
+                  a(href="#lightbox-28") 529
+              #lightbox-1.lightbox
+                .content
+                  img(src="images/b (1.jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-2.lightbox
+                .content
+                  img(src="images/v (2).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-3.lightbox
+                .content
+                  img(src="images/v (3).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-4.lightbox
+                .content
+                  img(src="images/v (4).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-5.lightbox
+                .content
+                  img(src="images/v (5).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-6.lightbox
+                .content
+                  img(src="images/v (6).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-7.lightbox
+                .content
+                  img(src="images/v (7).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-8.lightbox
+                .content
+                  img(src="images/v (8).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-9.lightbox
+                .content
+                  img(src="images/v (9).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-10.lightbox
+                .content
+                  img(src="images/v (10).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-11.lightbox
+                .content
+                  img(src="images/v (11).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-12.lightbox
+                .content
+                  img(src="images/v (12).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-13.lightbox
+                .content
+                  img(src="images/v (13).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-14.lightbox
+                .content
+                  img(src="images/v (14).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-15.lightbox
+                .content
+                  img(src="images/v (15).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-16.lightbox
+                .content
+                  img(src="images/b (1).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-17.lightbox
+                .content
+                  img(src="images/b (2).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-18.lightbox
+                .content
+                  img(src="images/b (3).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-19.lightbox
+                .content
+                  img(src="images/b (4).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-20.lightbox
+                .content
+                  img(src="images/b (5).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-21.lightbox
+                .content
+                  img(src="images/b (6).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-22.lightbox
+                .content
+                  img(src="images/b (7).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-23.lightbox
+                .content
+                  img(src="images/b (8).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-24.lightbox
+                .content
+                  img(src="images/b (9).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-25.lightbox
+                .content
+                  img(src="images/b (10).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-26.lightbox
+                .content
+                  img(src="images/b (11).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-27.lightbox
+                .content
+                  img(src="images/b (12).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+              #lightbox-28.lightbox
+                .content
+                  img(src="images/b (13).jpg")
+                  .title
+                    | Hai this is  
+                    b Bhargava
+                    |  from Kakinada..!
+                  a.close(href="#gallery")
+
+            
+            #tab2.tab-pane.fade.in               
+              .preloader
+                .preloader__content
+                  .preloader__loader
+                  .preloader__txt Loading ...
+              //to extentd container along with content give the bootstrap class as below
+              .extended-content-container 
+                .statistics
+                  .global
+                      
+                    .textANI.three
+                      span C
+                      span o
+                      span v
+                      span i
+                      span d
+                      span -
+                      span 1
+                      span 9
+                      span L
+                      span i
+                      span v
+                      span e
+
+                    .global__cases
+                      span
+                      h1(style="text-align:center;")
+                      h3.covtxt Total Cases
+                    .global__deaths
+                      span
+                      h1(style="text-align:center;")
+                      h3.covtxt Total Deaths
+                    .global__recovered
+                      span
+                      h1(style="text-align:center;")
+                      h3.covtxt Total Recovered
+                    div.covdiv
+                      input#search.cip(type="text" name="country" placeholder="Search Countries")
+                      br
+                      select#select.custom-select.cslt(onchange="changeOrder()")
+                        option(selected="" disabled="") Sort By
+                        option(value="cases") Total Cases
+                        option(value="deaths") Total Deaths
+                        option(value="recovered") Total Recoveries
+                  table.table
+                    thead
+                      tr
+                        th Country
+                        th Cases
+                        th Deaths
+                        th Recovered
+                    tbody
+                
+
+            #tab3.tab-pane.fade.in
+              .cals(ng-controller="todoController")
+                .titlec
+                  h1 Todo tasks
+                  p GBR's
+                .containerc
+                  nav.todo_nav
+                    ul.todo_select
+                      li.active All tasks
+                      li Pending
+                      li Done
+                  .todo_content
+
+                    .content_add.active
+                      .todo_tips                          
+                        table.table.table-borderless
+                          thead(style="text-align:center;")
+                            tr
+                              th.th1 S.No
+                              th.th2 MongoID
+                              th.th3 Name of the tasks
+                              th.th4 Edit
+                              th.th5 Delete
+                              th.th5 Status
+                          tbody
+                            tr(ng-repeat="tasks in todolist")
+                              td.td1(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;padding-top:20px;") {{$index+1}}
+                              td.td2(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;padding-top:20px;")
+                                span(ng-hide="editUser") {{tasks._id}}
+                                input.form-control(type="text" ng-show="editUser" ng-model="tasks._id" ng-read-only="true")
+                              td.td3(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;padding-top:20px;")
+                                span(ng-hide="editUser") {{tasks.taskname}}
+                                input.form-control(type="text" ng-show="editUser" ng-model="tasks.taskname")
+                              td.td4(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;")
+                                i.btn.btn-primary.far.fa-money-check-edit(ng-hide="editUser" ng-click="editData(); editUser = true" style="color:#fff;")
+                                i.btn.btn-success.fas.fa-check-circle(ng-show="editUser" ng-click="updateData(tasks); editUser = false")
+                              td.td5(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;")
+                                i.btn.btndel.far.fa-trash-alt(ng-click="removeData(tasks)")
+                              td.td5(style="border-bottom: 4px solid #f8c600;")
+                                i.btn.btndel {{tasks.status}}
+
+
+                    .content_pending
+                      .todo_tips
+                        table.table.table-borderless
+                          tbody
+                            tr(ng-repeat="tasks2 in todolist")
+                              td.td1(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;") {{$index+1}}
+                              td.td2(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;" ng-model="tasks2._id") {{tasks2._id}}
+                              td.td3(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;" ng-model="tasks2.taskname") {{tasks2.taskname}}
+                              td.td5(style="border-bottom: 4px solid #f8c600;") 
+                                i.btn.btndel.fad.fa-check-double(ng-click="moveData(tasks2)")
+                        
+                        
+                    .content_done
+                      .todo_tips
+                        table.table.table-borderless
+                          tbody
+                            tr(ng-repeat="tasks in todolist3")
+                              td.td1(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;") {{$index+1}}
+                              td.td2(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;" ng-model="tasks._id") {{tasks._id}}
+                              td.td3(style="border-right:4.6px solid #f8c600;border-bottom: 4px solid #f8c600;" ng-model="tasks.taskname") {{tasks.taskname}}
+                              td.td5(style="border-bottom: 4px solid #f8c600;")
+                                i.btn.btndel.fas.fa-check-double(ng-click="moveBack(tasks)")
+                        
+                  .todo_info
+                    .info_btn.active Click to add a task
+
+                    .info_input.info_init
+                      form#create_form
+                        .form_content
+                          input#todo_input.input_style(name="text" type="text" ng-model="tasks.taskname")
+                          input#todo_submit.submit_style(type="submit" name="submit" value="Submit" ng-click="saveData(tasks)")
+                          .remove_input
+                            i.fa.fa-times
+
+                    .info_input.info_update
+                      form#update_form
+                        .form_content
+                          input#todo_update_id(type="hidden")
+                          input#todo_update.input_style(name="text" type="text")
+                          input#submit_update.submit_style(type="submit" name="submit" value="Update")
+                          .remove_input
+                .blog_title
+                  a.blog_attr(href="https://lichin.me") visit my blog
+              // partial
+
+      
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous")
+    script(src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js")
+    // using local scripts
+    //
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    script.
+      jQuery(function ($) {
+      // Dropdown menu
+      $(".sidebar-dropdown > a").click(function () {
+      $(".sidebar-submenu").slideUp(200);
+      if ($(this).parent().hasClass("active")) {
+      $(".sidebar-dropdown").removeClass("active");
+      $(this).parent().removeClass("active");
+      } else {
+      $(".sidebar-dropdown").removeClass("active");
+      $(this).next(".sidebar-submenu").slideDown(200);
+      $(this).parent().addClass("active");
+      }
+      });
+
+      //toggle sidebar
+      $("#toggle-sidebar").click(function () {
+      $(".page-wrapper").toggleClass("toggled");
+      });
+
+      //Pin sidebar
+      $("#pin-sidebar").click(function () {
+      if ($(".page-wrapper").hasClass("pinned")) {
+
+      // unpin sidebar when hovered
+      $(".page-wrapper").removeClass("pinned");
+      $("#sidebar").unbind( "hover");
+      } else {
+      $(".page-wrapper").addClass("pinned");
+      $("#sidebar").hover(
+      function () {
+      console.log("mouseenter");
+      $(".page-wrapper").addClass("sidebar-hovered");
+      },
+      function () {
+      console.log("mouseout");
+      $(".page-wrapper").removeClass("sidebar-hovered");
+      }
+      )
+      }
+      });
+
+      //toggle sidebar overlay
+      $("#overlay").click(function () {
+      $(".page-wrapper").toggleClass("toggled");
+      });
+
+      //switch between themes
+      var themes = "default-theme legacy-theme chiller-theme ice-theme cool-theme light-theme";
+      $('[data-theme]').click(function () {
+      $('[data-theme]').removeClass("selected");
+      $(this).addClass("selected");
+      $('.page-wrapper').removeClass(themes);
+      $('.page-wrapper').addClass($(this).attr('data-theme'));
+      });
+
+      // switch between background images
+      var bgs = "bg1 bg2 bg3 bg4";
+      $('[data-bg]').click(function () {
+      $('[data-bg]').removeClass("selected");
+      $(this).addClass("selected");
+      $('.page-wrapper').removeClass(bgs);
+      $('.page-wrapper').addClass($(this).attr('data-bg'));
+      });
+
+      // toggle background image
+      $("#toggle-bg").change(function (e) {
+      e.preventDefault();
+      $('.page-wrapper').toggleClass("sidebar-bg");
+      });
+
+        //custom scroll bar is only used on desktop
+        //- if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //- $(".sidebar-content").mCustomScrollbar({
+        //- axis: "y",
+        //- autoHideScrollbar: true,
+        //- scrollInertia: 300
+        //- });
+        //- $(".sidebar-content").addClass("desktop");
+        //- }
+        });
+
+    script.
+      "use strict";
+      var underlineMenuItems = document.querySelectorAll("ul li");
+      underlineMenuItems[0].classList.add("active");
+      underlineMenuItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+      underlineMenuItems.forEach(function (item) { return item.classList.remove("active"); });
+      item.classList.add("active");
+      });
+      });
+
+    //- grid image gallery
+    script.
+      var gallery = document.querySelector('#gallery');
+      var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+      var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+      var resizeAll = function () {
+      var altura = getVal(gallery, 'grid-auto-rows');
+      var gap = getVal(gallery, 'grid-row-gap');
+      gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+      var el = item;
+      el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+      });
+      };
+      gallery.querySelectorAll('img').forEach(function (item) {
+      item.classList.add('byebye');
+      if (item.complete) {
+      console.log(item.src);
+      }
+      else {
+      item.addEventListener('load', function () {
+      var altura = getVal(gallery, 'grid-auto-rows');
+      var gap = getVal(gallery, 'grid-row-gap');
+      var gitem = item.parentElement.parentElement;
+      gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+      item.classList.remove('byebye');
+      });
+      }
+      });
+      window.addEventListener('resize', resizeAll);
+      gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+      item.classList.toggle('full');
+      });
+      });
+
+    //- covid update
+    script.
+      // Add a request interceptor
+      axios.interceptors.request.use(
+      function(config) {
+      //console.log("request sent", new Date());
+      return config;
+      },
+      function(error) {
+      preloader.classList.add("preloader--hidden");
+      alert(error);
+      return Promise.reject(error);
+      }
+      );
+      var preloader = document.querySelector(".preloader");
+      // Add a response interceptor
+      axios.interceptors.response.use(
+      function(response) {
+      preloader.classList.add("preloader--hidden");
+      return response;
+      },
+      function(error) {
+      preloader.classList.add("preloader--hidden");
+      alert(error);
+      return Promise.reject(error);
+      }
+      );
+      function getGlobalData() {
+      return axios.get("https://corona.lmao.ninja/v2/all");         /*geeting covid live update from website*/
+      }
+      function getCountriesData() {
+      return axios.get("https://corona.lmao.ninja/v2/countries");
+      }
+      axios
+      .all([getGlobalData(), getCountriesData()])
+      .then(
+      axios.spread(function(global, countries) {
+      //global
+      console.log("%c全球 Global", "color: #fb5e53");
+      console.log("確診 Cases", global.data.cases);
+      console.log("死亡 Deaths", global.data.deaths);
+      console.log("康復 Recovered", global.data.recovered);
+      var totalCases = global.data.cases.toLocaleString();
+      var totalDeaths = global.data.deaths.toLocaleString();
+      var totalRecovered = global.data.recovered.toLocaleString();
+      document.getElementsByClassName(
+      "global__cases"
+      )[0].childNodes[1].innerHTML = totalCases;
+      document.getElementsByClassName(
+      "global__recovered"
+      )[0].childNodes[1].innerHTML = totalRecovered;
+      document.getElementsByClassName(
+      "global__deaths"
+      )[0].childNodes[1].innerHTML = totalDeaths;
+      //countries
+      const tbody = document.getElementsByTagName("tbody")[0];
+      var countries = countries.data;
+      countries.forEach(function(element, index, array) {
+      const tr = document.createElement("tr");
+      // 國旗 flag
+      const img = document.createElement("img");
+      img.src = element.countryInfo.flag;
+      img.alt = element.countryInfo.iso2;
+      img.setAttribute("title", element.countryInfo.iso2);
+      var values = [
+      element.country,
+      element.cases,
+      element.deaths,
+      element.recovered
+      ];
+      values.forEach(function(element, index, array) {
+      const td = document.createElement("td");
+      element =
+      validation.isNumber(element) === "NaN" ?
+      element :
+      element.toLocaleString();
+      if (!index) {
+      let text = document.createTextNode(element);
+      td.appendChild(img);
+      td.appendChild(text);
+      } else {
+      td.innerHTML = element;
+      }
+      tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+      });
+      })
+      )
+      .catch(function(error) {
+      console.log(error);
+      });
+      var validation = {
+      isNumber: function(str) {
+      //  /^\\d+$/g is equal to /^[0-9]+$/g;
+      var patt = /^\\d+$/g;
+      return patt.test(str);
+      }
+      };
+      //searching countries
+      var search = document.getElementById("search");
+      search.addEventListener("keyup", function() {
+      var value = this.value.toLowerCase();
+      console.log("value", value);
+      const rows = document.querySelectorAll("tbody tr");
+      const rowsArray = Array.prototype.slice.call(rows);
+      rowsArray.forEach(function(element, index, array) {
+      var tdCountry = element.childNodes[0].innerHTML.toLowerCase();
+      if (tdCountry.indexOf(value) > -1) {
+      //console.log(tdCountry, tdCountry.indexOf(value));
+      element.classList.remove("hidden");
+      } else {
+      element.classList.add("hidden");
+      }
+      });
+      });
+      //sorting
+      function changeOrder() {
+      const value = document.getElementById("select").value;
+      const index = document.getElementById("select").selectedIndex;
+      //console.log(value, index);
+      const rows = document.querySelectorAll("tbody tr");
+      const rowsArray = Array.prototype.slice.call(rows);
+      rowsArray
+      .sort(function(A, B) {
+      var num1 = A.childNodes[index].innerHTML;
+      num1 = num1.replace(",", "");
+      var num2 = B.childNodes[index].innerHTML;
+      num2 = num2.replace(",", "");
+      return num2 - num1;
+      })
+      .forEach(function(tr) {
+      tr.parentElement.appendChild(tr);
+      });
+      //console.log(rowsArray);
+      }
+      document.querySelector(".arrow__up").addEventListener("click", function() {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+      });
+      });
+      document.querySelector(".arrow__down").addEventListener("click", function() {
+      window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+      });
+      });
+
+    //- todo list javaquery
+    script.
+      var counter = 3;
+
+      $('.todo_select li').click(function () {
+      var choose = $( this ).index() + 1;
+      // add tag class
+      $('.todo_select li').removeClass('active');
+      $( this ).addClass('active');
+      // add content class
+      $('.todo_content div').removeClass('active');
+      $( '.todo_content div:nth-child(' + choose + ')' ).addClass('active');
+      });
+      
+      $('.info_btn').click(function(){
+      $('.info_btn').removeClass('active');
+      $('.info_init').addClass('active');
+      });
+
+      $('form .remove_input').click(function(){
+      $('.todo_info').children().removeClass('active');
+      $('.info_btn').addClass('active');
+      });
+      
+      //- $('.content_add .todo_tips').on('click', '.del-btn', function() {
+      //- todo_number = ('.' + $( this ).parent().parent().attr('class') );
+      //- $(todo_number).remove();
+      //- Record();
+      //- });
+
+      //- $('.content_add .todo_tips').on('click', '.edit-btn', function() {
+      //- todo_number = $( this ).parent().parent().attr('class');
+      //- todo_migration = $( this ).parent().parent().children('p').text();
+      //- $('.todo_info').children().removeClass('active');
+      //- $('.info_update').addClass('active');
+
+      //- // get data into Update input
+      //- todo_migration = todo_migration.substring(2);
+      //- $('.info_update form #todo_update').val( todo_migration );
+      //- //Update(todo_number);
+      //- $("#todo_update_id").val(todo_number);
+      //- });
+
+      $('.content_pending .todo_tips').on('click', '.btn', function() {
+      // remove form Pending , also record # of todo.
+      todo_number = $( this ).parent().parent().attr('class');
+      todo_migration = $( this ).parent().parent().children('p').text();
+      $( this ).parent().parent().remove();
+
+      //- // join to Done
+      $('.content_done .todo_tips ul').append('<li class=' + todo_number + '><p>' + todo_migration + '</p><div class="btn-group"><div class="btn">Not done?</div></div></li>');
+      Record();
+      });
+
+      //- $('.content_done .todo_tips').on('click', '.btn', function() {
+      //- // remove from Done, also record # of record.
+      //- todo_number = $( this ).parent().parent().attr('class');
+      //- todo_migration = $( this ).parent().parent().children('p').text();
+      //- $( this ).parent().parent().remove();
+
+      //- // join to Pending.
+      //- $('.content_pending .todo_tips ul').append('<li class=' + todo_number + '><p>' + todo_migration + '</p><div class="btn-group"><div class="btn">Done?</div></div></li>');
+      //- Record();
+      //- });
+
+      //- $( "#create_form" ).submit(function( event ) {
+      //- var todo_content = $( "#todo_input").val()
+      //- if ( todo_content.length > 3 ) {
+      //- var new_todo =  '<li class=todo_' + counter + '><p>- ' + todo_content + '</p><div class="btn-group"><div class="btn del-btn"><i class="fa fa-trash" aria-hidden="true"></i></div><div class="btn edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></div></div></li>'
+      //- var new_pending =  '<li class=todo_' + counter + '><p>- ' + todo_content + '</p><div class="btn-group"><div class="btn">Done?</div></div></li>'
+      //- $('.content_add .todo_tips ul').append(new_todo);
+      //- $('.content_pending .todo_tips ul').append( new_pending );
+      //- $('#todo_input').val("");
+      //- counter+=1;
+      //- Record();
+      //- } else {
+      //- alert("from create: too less word! make it long > 3");
+      //- }
+      //- event.preventDefault();
+      //- });
+
+      //- $( "#update_form" ).submit(function( event ){
+      //- id=$("#todo_update_id").val();
+      //- alert(id);
+      //- alert($( "#todo_update").val());
+      //- var todo_content = '- ' + $( "#todo_update").val()
+      //- if ( todo_content.length > 3 ) {
+      //- $( '.' + id ).children('p').text(todo_content);
+      //- $('#todo_update').val("");
+      //- } else {
+      //- //alert("from  update: too less word! make it long > 3, " + id);
+      //- return;
+      //- }
+
+      //- $('.todo_info').children().removeClass('active');
+      //- $('.info_btn').addClass('active');
+      //- event.preventDefault();
+      //- });
+      //- function Record() {
+      //- if($('.content_add .todo_tips ul li').size() === 0){
+      //- $('.info_btn').text('New thing todo?');
+      //- } else {
+      //- todo_done = $('.content_done .todo_tips ul li').size();
+      //- todo_all = $('.content_add .todo_tips ul li').size();
+      //- $('.info_btn').text( todo_done + '/' + todo_all);
+      //- }
+      //- }
+
+    //- Todo list angular script
+    script.
+      var app = angular.module('todoapp',[]);
+      app.controller('todoController',['$scope', '$http', function($scope,$http){
+        
+        $http({
+          method : 'GET',
+          url : '/gettasks',
+        }).then(function success(response){
+          //console.log(response.data);
+          $scope.todolist = response.data;
+        },function error(response){
+          alert('Error occured, please try again later!');
+        })
+
+        $scope.saveData = function(tasks){
+          console.log($scope.tasks);
+          $http({
+            method : 'POST',
+            url : '/posttasks',
+            data : $scope.tasks
+          }).then(function success(response){
+            //alert('Inserted succesfully');
+            $scope.todolist.push(response.data);
+            $scope.tasks = {};
+          }, function error(response){
+            alert('Error occured, please try again');
+          })
+        }
+        
+        $scope.removeData = function(tasks){
+        $http({
+          method : 'DELETE',
+          url : '/deletetasks1/'+tasks._id
+        }).then(function success(response){
+           alert('Removed succesfully')
+           var index = $scope.todolist.indexOf(tasks);
+           $scope.todolist.splice(index,1);
+        }, function error(response){
+           alert('Error occured, please try again');
+        })
+      }
+
+        $scope.updateData = function(tasks){
+        $scope.editUser = false;
+        $http({
+          method : 'PUT',
+          url : '/edituser/'+tasks._id,
+          data : tasks
+        }).then(function success(response){
+          alert('updated succesfully');
+        }, function error(response){
+          alert('error occured, please try again');
+        })
+      }
+
+      //-  $scope.moveData = function(tasks){
+      //-   $http({
+      //-     method : 'PUT',
+      //-     url : '/movetask/'+tasks._id,
+      //-     data : tasks
+      //-   }).then(function success(response){
+      //-      alert('Moved succesfully');
+      //-      var index2 = $scope.todolist.indexOf(tasks);
+      //-      $scope.todolist.splice(index2,1); //to remove that particular row data after moving else it will still appear in table
+      //-      $scope.todolist3.push(response.data);
+      //-   }, function error(response){
+      //-     alert('Moving failed');
+      //-   })
+      //- }
+
+      //- $scope.moveData = function (tasks2) {
+      //-  var id= tasks2._id;
+      //-   var idx= $scope.todolist.indexOf(tasks2);
+      //-   $scope.todolist.splice(idx,1);
+      //-   /* add person object to another scope array*/
+      //-    $scope.todolist3.push(tasks2);
+
+      //-    }
+
+      }])
+
